@@ -5,7 +5,8 @@ from pages.base_page import BasePage
 import locators.order_personal_info_page_locators as loc
 
 def _metro_option(station: str):
-    return (By.XPATH,"//div[contains(@class,'select-search__select')]"f"//li//button[contains(., '{station}')]",)
+    by, path = loc.METRO_OPTION
+    return (by, path.format(station=station))
 
 class OrderPersonalInfoPage(BasePage):
     @allure.step("Заполнить поле «Имя»")

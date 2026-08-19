@@ -6,3 +6,4 @@ ADDRESS_INPUT = (By.CSS_SELECTOR, "input[placeholder='* Адрес: куда п�
 METRO_INPUT = (By.CSS_SELECTOR, ".select-search__input")
 PHONE_INPUT = (By.CSS_SELECTOR, "input[placeholder='* Телефон: на него позвонит курьер']")
 NEXT_BUTTON = (By.XPATH, "//button[text()='Далее']")
+METRO_OPTION = (By.XPATH, "//div[contains(@class,'select-search__select')]//li//button[contains(., '{station}')]")

@@ -39,14 +39,19 @@ class MainPage(BasePage):
 
     @allure.step("Нажать на вопросу №{index} в FAQ")
     def click_faq_question(self, index: int) -> None:
-        heading = (By.ID, f"{loc.FAQ_HEADING_ID}{index}")
+        by, locator_string = loc.FAQ_HEADING_TEMPLATE
+        heading = (by, locator_string.format(index=index))
         self.scroll_to(heading)
         self.click(heading)
 
     @allure.step("Проверить видимость ответа на вопрос FAQ №{index}")
     def is_faq_answer_visible(self, index: int) -> bool:
-        return self.is_visible((By.ID, f"{loc.FAQ_PANEL_ID}{index}"))
+        by, locator_string = loc.FAQ_PANEL_TEMPLATE
+        panel = (by, locator_string.format(index=index))
+        return self.is_visible(panel)
 
     @allure.step("Получить текст ответа на вопрос FAQ №{index}")
     def get_faq_answer_text(self, index: int) -> str:
-        return self.wait_visible((By.ID, f"{loc.FAQ_PANEL_ID}{index}")).text.strip()
+        by, locator_string = loc.FAQ_PANEL_TEMPLATE
+        panel = (by, locator_string.format(index=index))
+        return self.wait_visible(panel).text.strip()

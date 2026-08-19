@@ -1,1 +1,0 @@
-Не удалось получить консольные логи: 'WebDriver' object has no attribute 'get_log'
