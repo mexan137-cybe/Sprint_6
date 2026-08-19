@@ -1,0 +1,4 @@
+Тест: test_faq_answer_is_shown_on_click[\u041c\u043e\u0436\u043d\u043e \u043b\u0438 \u0437\u0430\u043a\u0430\u0437\u0430\u0442\u044c \u0441\u0430\u043c\u043e\u043a\u0430\u0442 \u043f\u0440\u044f\u043c\u043e \u043d\u0430 \u0441\u0435\u0433\u043e\u0434\u043d\u044f?]
+Время падения: 2026-08-19_14-10-57
+URL: https://qa-scooter.education-services.ru/
+Заголовок страницы: undefined

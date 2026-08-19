@@ -1,39 +1,10 @@
 import pytest
-
+from data.config import ORDER_SCENARIOS
 from data.config import BASE_URL, YANDEX_LOGO_REDIRECT_HOST
-from data.order_data import OrderData
 from pages.main_page import MainPage
 from pages.order_personal_info_page import OrderPersonalInfoPage
 from pages.order_rent_info_page import OrderRentInfoPage
 
-FIRST_DATA_SET = OrderData(
-    first_name="Александр",
-    last_name="Фирсов",
-    address="Санкт-Петербург, ул. Правды, д. 23",
-    metro_station="Маяковская",
-    phone="+79667885463",
-    delivery_date="12.12.2026",
-    rent_period="двое суток",
-    scooter_color="black",
-    comment="Срочная доставка",
-)
-
-SECOND_DATA_SET = OrderData(
-    first_name="Игорь",
-    last_name="Пиков",
-    address="Москва, Ленина пр-т, д. 103",
-    metro_station="Комсомольская",
-    phone="+79448239393",
-    delivery_date="11.10.2026",
-    rent_period="пятеро суток",
-    scooter_color="grey",
-    comment="",
-)
-
-ORDER_SCENARIOS = [
-    ("top", FIRST_DATA_SET),
-    ("bottom", SECOND_DATA_SET),
-]
 
 @pytest.mark.parametrize(
     "entry_point, data",
